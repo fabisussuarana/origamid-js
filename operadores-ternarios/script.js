@@ -1,3 +1,5 @@
+// 'use script' no arquivo js serve para acusar alguns erros que ele ignora
+
 x += y; // x = x + y
 x -= y; // x = x - y
 x *= y; // x = x * y

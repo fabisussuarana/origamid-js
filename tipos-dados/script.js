@@ -2,17 +2,22 @@ console.log('Oioi')
 
 /* LET
    - pode mudar o valor no decorrer do código
-   - não pode ser redeclara(mesmo nome) */
+   - não pode ser redeclara(mesmo nome) 
+   - mantém o escopo no bloco, por exemplo: 
+   não deixa acessar de fora, variáveis que 
+   estão dentro de um bloco */
 let nome = 'Fabiana'
 
 /* VAR
    - pode mudar o valor no decorrer do código
-   - pode ser redeclarada */
+   - pode ser redeclarada 
+   - é pouco usada hoje em dia por vazar do escopo */
 var idade = 17
 
 /* CONST
    - não pode mudar o valor no decorrer do código
-   - não pode ser redeclarada */
+   - não pode ser redeclarada
+   - mantém o escopo no bloco */
 const variavel = 1
 
 let comidaFav
