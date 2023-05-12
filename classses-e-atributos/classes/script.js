@@ -5,6 +5,7 @@ console.log(texto.classList); // Traz a lista de classes do elemento
 
 texto.classList.add('ativo'); // Adiciona uma classe
 texto.classList.add('ativo2', 'ativo3');
+texto.classList += ' ativo4'; // concatena a lista de classes atual com a classe 'ativo4', adicionando-a
 console.log(texto.classList); 
 
 texto.classList.remove('ativo3'); // Remove uma classe
@@ -16,4 +17,5 @@ addEventListener('click', () => {
     console.log(texto.classList.contains('teste')); // Retorna verdadeiro se a classe existir e falso se não existir
 })
 
-console.log(texto.classList.replace('ativo', 'inativo')); 
+texto.classList.replace('ativo2', 'inativo'); // Substitui uma classe por outra, no caso 'ativo2' por 'inativo'
+console.log(texto.classList);
