@@ -18,11 +18,10 @@ var idade = 17
    - não pode mudar o valor no decorrer do código
    - não pode ser redeclarada
    - mantém o escopo no bloco */
-const variavel = 1
+const teste = 1
 
-let comidaFav
-comidaFav = 'Pipoca'
-console.log(nome, idade, variavel, comidaFav)
+let comidaFav = 'Pipoca'
+console.log(nome, idade, teste, comidaFav)
 
 let a, b, c, d, e
 console.log(a, b, c, d, e)

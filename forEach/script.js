@@ -1,5 +1,8 @@
-/* O primeiro parâmetro é o callback, ou seja, a função que será ativada a
-   cada item. Essa função pode receber três parâmetros: valorAtual, index e array */
+/* O primeiro parâmetro é o callback, ou seja, a função que será ativada/aplicada a
+   cada item. Essa função pode receber três parâmetros: 
+        - valorAtual(item atual), 
+        - index(que é a sequência númerica daqueles itens) e 
+        - array(o array completo, caso queira imprimir) */
 
 const imgs = document.querySelectorAll('img');
 
@@ -7,14 +10,14 @@ const imgs = document.querySelectorAll('img');
 //     console.log(item, index, array);
 // });
 
-/* Transformar em array:
+/* Transformar HTMLCollection em array:
 
     const titulos = document.getElementByClassName('titulo');
     const minhaArray = Array.from(titulos);   */ 
 
 // Se não for array, não é possível percorrer usando o forEach
 
-
+// ---------------------------------------------------------------------------------
 
 // ARROW FUNCTION
 /* Sintaxe curta em relação a function expression. Basta remover 
