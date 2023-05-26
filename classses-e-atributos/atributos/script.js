@@ -10,11 +10,11 @@ console.log(texto.getAttribute('id'));
 e atualiza o valor do atributo caso ele exista */
 texto.setAttribute('src', 'testando');
 
+// Traz o elemento da posição determinada
 console.log(texto.attributes[1]); 
 
 // hasAttribute: se o atributo existir ele retorna verdadeiro, se não, ele retorna falso
 console.log(texto.hasAttribute('src'));
-
 
 // removeAttribute: remove o atributo
 texto.removeAttribute(['data-teste']);
