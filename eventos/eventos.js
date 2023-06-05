@@ -55,6 +55,18 @@ linkExterno.addEventListener('click', clickNoLink);
 
 /* Keyboard - adiciona atalhos para melhor navegação do site */
 
+function handleKeyboard(event){
+    // Consigo ver exatamente o que eu tô clicando
+    console.log(event.key);
+
+    // Adiciona a classe fundoAzul que no css está com a propriedade de mudar a cor do body ao clicar em f
+    if(event.key === 'f'){
+        document.body.classList.toggle('fundoAzul');
+    }
+}
+
+window.addEventListener('keydown', handleKeyboard);
+
 // -----------------------------------------------------------------------------------------------------------------------
 
 // link onde possui vários eventos: https://developer.mozilla.org/en-US/Docs/Web/Events 
