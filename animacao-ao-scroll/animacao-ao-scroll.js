@@ -103,10 +103,11 @@ function initAnimacaoScroll() {
         // o método getBoundingClientRect() tem algumas propriedades e a usada aqui é o top
         // para saber a distância da section para o topo
         const sectionTop = section.getBoundingClientRect().top;
-        // essa subtração é feita para que a animação não ocorra apenas quando bater na ponta da nova
-        // section, mas sim, um pouco acima
+        // essa subtração é feita para que a animação não ocorra apenas quando bater na ponta 
+        // da nova section, mas sim, um pouco acima, dessa forma, a animação vai ocorrer quando
+        // tiver a distância do elemento para o topo menos 60% da página, acontecendo um pouco antes.
+        // Assim, a distância para que a animação ocorra diminui.
         const isSectionVisible = (sectionTop - windowMetade) < 0;
-        console.log(sectionTop)
         if(isSectionVisible)
           section.classList.add('ativo');
         else 
