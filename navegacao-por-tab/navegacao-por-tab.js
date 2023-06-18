@@ -23,3 +23,5 @@ function initTabNav(){
     });
   }
 }
+
+initTabNav();
