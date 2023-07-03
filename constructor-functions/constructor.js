@@ -27,8 +27,8 @@ const lapisLegal = new Lapis('MoLin', 'Verde');
 
 // ------------------------------------------------------------------------------------------------------
 
-// As variáveis ficam protegidas dentro do objeto, sendo mostrado para os objetos ao qual ele é atribuído
-// apenas os atributos criados usando this. Então taxa e precoFinal não é acessado pelo objeto pc.
+// As variáveis ficam protegidas dentro do objeto, dessa forma, é mostrado para os objetos criados ao qual 
+//ele é atribuído, apenas os atributos, que são criados usando this. Então taxa e precoFinal não é acessado pelo objeto pc.
 function Computador(marcaPc, precoPc){
     // variáveis
     const taxa = 1.2;
