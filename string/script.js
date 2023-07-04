@@ -50,3 +50,70 @@ console.log(fraseTeste.slice(2, -1)); // retorna as - a partir do index 2 até o
 // substring - funciona como o slide cortando a string de acordo com os valores de start e end, porém,
 // não funciona com valores negativos.
 
+const linguagem = 'JavaScript';
+
+console.log(linguagem.substring(0, 4));
+
+// -----------------------------------------------------------------------------------------------------
+// indexOf(search) e lastIndexOf(search) - retornam o index da string, assim que acham o primeiro
+// caractere eles já retornam o resultado. No caso do lastIndexOf ele retorna o último resultado.
+
+const instrumento = 'guitarra';
+
+console.log(instrumento.indexOf('r')); // retorna 5
+console.log(instrumento.lastIndexOf('r')); // retorna 6 porque pega o último r que aparece
+
+// -----------------------------------------------------------------------------------------------------
+// padStart(n, string) e padEnd(n, string) - altera o tamanho da string que é definido pelo valor de n.
+// Dessa forma, temos uma string com 8 caracteres, e passamos n = 10, então ela passará a ter 10 caracter.
+// O segun argumento é o que vai preencher os espaços vazios, caso não seja passado, fica vazio.
+
+const listaPrecos = ['R$ 10', 'R$ 2', 'R$ 8'];
+
+listaPrecos.forEach((preco) => {
+    console.log(preco.padStart(10, '-')); // -----R$ 10     ------R$ 2      ------R$ 8  
+});
+
+listaPrecos.forEach((preco) => {
+    console.log(preco.padEnd(10, '-')); //   R$ 10-----     R$ 2------      R$ 8------     
+});
+
+// -----------------------------------------------------------------------------------------------------
+// repeat(n) - repete a string n vezes
+
+const oi = 'Oi';
+
+console.log(oi.repeat(3));
+
+// -----------------------------------------------------------------------------------------------------
+// replace(regExp|subStr, newStr|function) - troca parte da string por outra. Podemos utilizar uma 
+// regular expression ou um valor direto. Se usarmos um valor direto ele irá trocar apenas o primeiro
+// valor que encontrar.
+
+let listaItens = 'Camisas Bonés Calças Bermudas Vestidos Saias';
+listaItens = listaItens.replace(/[ ]+/g, ', ');
+
+console.log(listaItens); // Camisas, Bonés, Calças, Bermudas, Vestidos, Saias
+
+let preco = 'R$ 1200,00';
+preco = preco.replace(',', '.');
+
+console.log(preco); // R$ 1200.00
+
+// -----------------------------------------------------------------------------------------------------
+// split(padrao) - divide a string de acordo com um padrão passado e retorna uma array
+// join() - junta as strings e adiciona string entre os itens da array
+
+const items = '<div>carregador</div><div>monitor</div>';
+const arrayItens = items.split('div');
+const novoHtml = arrayItens.join('section');
+
+console.log(arrayItens); // <,  >carregador</,    ><,    >monitor</,    >    5 itens na array
+console.log(novoHtml); // <section>carregador</section><section>monitor</section>
+
+// -----------------------------------------------------------------------------------------------------
+// toLowerCase() - retorna tudo em letra minúscula
+// toUpperCase() - retorna tudo em letra maiúscula
+
+const nome = 'Fabi';
+console.log(nome.toLowerCase(), nome.toUpperCase());
