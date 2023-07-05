@@ -68,8 +68,10 @@ console.log(Math.floor(Math.random() * 500)); // entre 0 e 500
 
 console.log(Math.floor(Math.random() * (70 - 30 + 1)) + 30); // entre 30 e 70.
 
+// -----------------------------------------------------------------------------------------------------
 // trimp() - retira espaços em branco.
 
+// -----------------------------------------------------------------------------------------------------
 // Exercício
 
 // Retorne o maior número da lista abaixo
