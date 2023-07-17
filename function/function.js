@@ -180,3 +180,9 @@ function criarH1(conteudo){
 }
 
 console.log(criarH1('Esse é meu conteúdo de h1'));
+
+// ou
+
+const h1Titulo = criarElemento.bind(null, 'h1', 'titulo');
+
+console.log(h1Titulo('Cursos'));
