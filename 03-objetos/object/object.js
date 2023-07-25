@@ -169,7 +169,7 @@ frase.constructor; // String
 
 const objetos = ['Lâmpada', 'Martelo'];
 
-frutas.hasOwnProperty('map'); // false
+objetos.hasOwnProperty('map'); // false
 Array.hasOwnProperty('map'); // false
 Array.prototype.hasOwnProperty('map'); // true
 
@@ -181,7 +181,7 @@ window.propertyIsEnumerable('innerHeight'); // true
 
 const doces = ['Pudim', 'Brigadeiro'];
 
-Array.prototype.isPrototypeOf(frutas); // true
+Array.prototype.isPrototypeOf(doces); // true
 
 // --------------------------------------------------------------------------------------------------------------------
 // tostring() - retorna o tipo de objeto. 
