@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="forms.js" defer></script>
+    <title>Forms</title>
+</head>
+
+<body>
+
+    <form name="contato" id="contato">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <label for="mensagem">Mensagem</label>
+        <textarea name="mensagem" id="mensagem"></textarea>
+    </form>
+
+    <input type="email" name="email" id="email" required>
+    <span class="erro"></span>
+
+
+    <select name="cores" id="cores">
+        <option value="black">Preto</option>
+        <option value="white">Branco</option>
+        <option value="blue">Azul</option>
+    </select>
+    <input type="color">
+
+    <!-- diferentes inputs -->
+    <input type="color">
+    <input type="date">
+    <input type="number">
+    <input type="range">
+    <input type="password">
+
+    <label for="identidade">Possui identidade?</label>
+    <input type="checkbox" value="identidade" id="identidade">
+    <label for="casado">Casado?</label>
+    <input type="checkbox" value="casado" id="casado">
+
+    <!-- Radio -->
+    <input type="radio" id="guitarra" value="guitarra" name="instrumento" />
+    <label for="guitarra">Guitarra</label>
+  
+    <input type="radio" id="violao" value="violao" name="instrumento" />
+    <label for="violao">Violão</label>
+  
+    <input type="radio" id="baixo" value="baixo" name="instrumento" />
+    <label for="baixo">Baixo</label>
+  
+    <!-- pegando todos os valores -->
+    <form name="contato" id="contato">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <label for="mensagem">Mensagem</label>
+        <textarea name="mensagem" id="mensagem"></textarea>
+      </form>
+      
+</body>
+
+</html>
