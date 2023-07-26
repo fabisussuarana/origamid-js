@@ -6,12 +6,14 @@
 // Ambos os valores selecionam a mesma div acima.
 let div = document.querySelector('div');
 div = document.querySelector('[data-cor]');
-div = document.querySelector('[data-cor="azul"]');
+// esse ^ antes do = significa que vai selecionar o que começar com azul
+div = document.querySelector('[data-cor^="azul"]');
 
 div.dataset;
 // DOMStringMap {cor: "azul", width: "500"}
 div.dataset.cor; // 'azul'
 div.dataset.width; // '500'
+// adiciona data-tempo na tag html
 div.dataset.tempo = 1000;
 // DOMStringMap {cor: "azul", width: "500", tempo: "1000"}
 
