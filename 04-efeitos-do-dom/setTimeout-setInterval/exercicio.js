@@ -24,11 +24,13 @@ function iniciarTempo(){
         tempo.innerText = i++;
     }, 100);
     iniciar.setAttribute('disabled', '');
+    iniciar.classList.add('colorDisable');
 }
 
 function pausarTempo(){
     clearInterval(timer);
     iniciar.removeAttribute('disabled');
+    iniciar.classList.remove('colorDisable');
 }
 
 function resetarTempo(){

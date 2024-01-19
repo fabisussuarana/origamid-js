@@ -2,6 +2,9 @@
 // Não existe garantia de que o código será executado exatamente após o tempo, pois o callback entra na fila e 
 // espera pela Call Stack estar vazia.
 
+// setTimeout só ocorre uma vez
+// setInterval ocorre várias vezes, no intervalo definido
+
 function espera(texto) {
     console.log(texto);
 }

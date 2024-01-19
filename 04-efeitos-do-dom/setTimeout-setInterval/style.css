@@ -34,6 +34,11 @@ h1{
     background-color: rgb(143, 209, 78);
 }
 
+.iniciar.colorDisable{
+    background-color: rgb(87, 94, 80);
+    color: #b1b1b1;
+}
+
 .pausar{
     background-color: rgb(212, 132, 75);
 }
