@@ -11,6 +11,7 @@ export default function initDropdownMenu() {
   });
 
   function handleClick(event) {
+    // previne o padrão, ou seja, que redirecione para outra página
     event.preventDefault();
     this.classList.add('active');
     outsideClick(this, ['touchstart', 'click'], () => {
