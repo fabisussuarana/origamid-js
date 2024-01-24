@@ -16,5 +16,6 @@ if (menuButton) {
       menuButton.classList.remove("active");
     });
   }
+  
   eventos.forEach((evento) => menuButton.addEventListener(evento, openMenu));
 }
