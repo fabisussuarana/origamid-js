@@ -1,67 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="forms.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <title>Forms</title>
-</head>
+  </head>
 
-<body>
-
-    <form name="contato" id="contato">
+  <body>
+    <div class="container" style="margin-top: 70px;">
+      <form name="contato" id="contato" class="container">
         <label for="nome">Nome</label>
-        <input type="text" name="nome" id="nome">
+        <input type="text" name="nome" id="nome" />
         <label for="email">Email</label>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" />
         <label for="mensagem">Mensagem</label>
         <textarea name="mensagem" id="mensagem"></textarea>
-    </form>
+        <select name="cores" id="cores">
+          <option value="#fff">Branco</option>
+          <option value="#bbb">Cinza</option>
+          <option value="#e5e5f5">Lilás</option>
+        </select>
+        <input type="color" />
+      </form>
 
-    <input type="email" name="email" id="email" required>
-    <span class="erro"></span>
+      <form name="contato" id="contato_required">
+        <label for="email">Email Required</label>
+        <input type="email" name="email" id="email" required />
+        <span class="erro"></span>
+      </form>
 
+      <!-- diferentes inputs -->
+      <form class="container" id="check">
+        <input type="color" />
+        <input type="date" />
+        <input type="number" />
+        <input type="range" />
+        <input type="password" />
+        <div>
+          <label for="identidade">Possui identidade?</label>
+          <input type="checkbox" value="identidade" id="identidade" />
+        </div>
+        <div>
+          <label for="casado">Casado?</label>
+          <input type="checkbox" value="casado" id="casado" />
+        </div>
+      </form>
 
-    <select name="cores" id="cores">
-        <option value="black">Preto</option>
-        <option value="white">Branco</option>
-        <option value="blue">Azul</option>
-    </select>
-    <input type="color">
+      <!-- Radio -->
+      <form class="container" id="radio">
+        <div>
+          <input type="radio" id="guitarra" value="guitarra" name="instrumento" />
+          <label for="guitarra">Guitarra</label>
+        </div>
+        <div>
+          <input type="radio" id="violao" value="violao" name="instrumento" />
+          <label for="violao">Violão</label>
+        </div>
+        <div>
+          <input type="radio" id="baixo" value="baixo" name="instrumento" />
+          <label for="baixo">Baixo</label>
+        </div>
+      </form>
 
-    <!-- diferentes inputs -->
-    <input type="color">
-    <input type="date">
-    <input type="number">
-    <input type="range">
-    <input type="password">
-
-    <label for="identidade">Possui identidade?</label>
-    <input type="checkbox" value="identidade" id="identidade">
-    <label for="casado">Casado?</label>
-    <input type="checkbox" value="casado" id="casado">
-
-    <!-- Radio -->
-    <input type="radio" id="guitarra" value="guitarra" name="instrumento" />
-    <label for="guitarra">Guitarra</label>
-  
-    <input type="radio" id="violao" value="violao" name="instrumento" />
-    <label for="violao">Violão</label>
-  
-    <input type="radio" id="baixo" value="baixo" name="instrumento" />
-    <label for="baixo">Baixo</label>
-  
-    <!-- pegando todos os valores -->
-    <form name="contato" id="contato">
+      <!-- pegando todos os valores -->
+      <form name="contato" id="contato_dois" class="container">
         <label for="nome">Nome</label>
-        <input type="text" name="nome" id="nome">
+        <input type="text" name="nome" id="nome" />
         <label for="email">Email</label>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" />
         <label for="mensagem">Mensagem</label>
         <textarea name="mensagem" id="mensagem"></textarea>
       </form>
-      
-</body>
-
+    </div>
+  </body>
 </html>
