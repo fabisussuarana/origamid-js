@@ -6,9 +6,9 @@
 
 [
     {
-    "id": 1,
-    "nome": "Andre",
-    "email": "andre@origamid.com"
+        "id": 1,
+        "nome": "Andre",
+        "email": "andre@origamid.com"
     }
 ]
 
@@ -33,4 +33,23 @@
         tempo: '10min',
     }
 ]
+
+fetch('./dados.json')
+    .then(r => r.json())
+    .then(json => {
+        console.log(json[0].faculdade);
+    });
+
+// JSON.parse() - passa um texto JSON para objeto JavaScript
+const textoJSON = '{"id": 1, "titulo": "JavaScript", "tempo": "25min"}';
+const textoOBJ = JSON.parse(textoJSON);
+
+// JSON.stringify() - passa um objeto JavaScript para string no formato JSON
+const enderecoOBJ = {
+    cidade: 'Rio de Janeiro',
+    rua: 'Ali Perto',
+    pais: 'Brasil',
+    numero: 50,
+}
+const enderecoJSON = JSON.stringify(enderecoOBJ);
 
