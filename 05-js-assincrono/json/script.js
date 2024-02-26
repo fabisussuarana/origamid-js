@@ -52,4 +52,4 @@ const enderecoOBJ = {
     numero: 50,
 }
 const enderecoJSON = JSON.stringify(enderecoOBJ);
-
+localStorage.config = JSON.stringify(enderecoOBJ);
