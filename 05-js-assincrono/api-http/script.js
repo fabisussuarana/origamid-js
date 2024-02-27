@@ -65,3 +65,25 @@ fetch(url, {
   console.log(response.headers.get('Content-Type'));
 });
 
+// HEADERS
+// Cache-Control
+// Tempo que o arquivo deve ficar em cache em segundos. Ex: public, max-age=3600
+
+// Content-Type
+// Tipo de conteúdo. Ex: text/html; charset=utf-8. Indicar o tipo de arquivo principalmente 
+// em métodos POST e PUT.
+
+// Lista de Headers
+// https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
+
+// Cross-Origin Resource Sharing, gerencia como deve ser o compartilhamento de recursos entre 
+// diferente origens.
+
+// É definido no servidor se é permitido ou não o acesso dos recursos através de scripts por 
+// outros sites. Utilizando o Access-Control-Allow-Origin.
+
+// Se o servidor não permitir o acesso, este será bloqueado. É possível passar por cima do 
+// bloqueio utilizando um proxy.
+
+// CORS é um acordo entre browser / servidor ou servidor / servidor. Ele serve para dar certa 
+// proteção ao browser, mas não é inviolável.
