@@ -1,0 +1,13 @@
+[
+    {
+      "id": 1,
+      "faculdade": true
+    },
+    {
+      "pertences": [
+        "lapis",
+        "caneta",
+        "caderno"
+      ]
+    }
+]
