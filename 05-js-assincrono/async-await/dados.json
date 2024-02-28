@@ -1,13 +1,4 @@
-[
-    {
-      "id": 1,
-      "faculdade": true
-    },
-    {
-      "pertences": [
-        "lapis",
-        "caneta",
-        "caderno"
-      ]
-    }
-]
+{
+  "id": 17,
+  "faculdade": "Sistemas de Informação"
+}
