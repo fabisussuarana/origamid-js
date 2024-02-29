@@ -6,7 +6,7 @@ window.history;
 window.history.back(); // vai para a anterior
 window.history.forward(); // vai para a próxima
 
-console.log(window.history);
+// console.log(window.history);
 
 // PUSHSTATE()
 // A parte interessante de manipularmos o history é que podemos modificar o histórico e adicionar um novo item. 
@@ -22,6 +22,7 @@ window.history.pushState(null, null, 'sobre.html');
 // POPSTATE
 // O evento popstate pode ser adicionado ao objeto window. Assim podemos executar uma função toda vez que o usuário 
 // clicar no botão de voltar ou próximo.
+// popstate só vai funcionar se modificar na "mão" o push state
 window.addEventListener('popstate', () => {
     console.log('Teste');
     fetchPage(window.location.pathname);
@@ -33,8 +34,7 @@ window.addEventListener('popstate', () => {
 async function fetchPage(url) {
     const pageReponse = await fetch(url);
     const pageText = await pageReponse.text();
-    // window.history.pushState(null, null, url);
-    
-    replaceContent(pageText);
+    console.log(pageText)
+    window.history.pushState(null, null, url);
 }  
 
