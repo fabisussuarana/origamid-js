@@ -5,12 +5,16 @@ const links = document.querySelectorAll('a');
 function handleClick(event){
     event.preventDefault();
     fetchPage(event.target.href);
+    // muda o url da página lá em cima, para o url do link clicado
+    window.history.pushState(null, null, event.target.href);
 }
 
 // 3 - await espera a resposta do fetch
 // 4 - await espera a resposta passar para texto
 // 5 - mando essa resposta de texto como parâmetro para a função replaceContent
 async function fetchPage(url){
+    // em páginas maiores, é interessante colocar algo de carregando aqui
+    // antes do await carregar
     const pageResponde = await fetch(url);
     const pageText = await pageResponde.text();
     replaceContent(pageText);
@@ -31,9 +35,12 @@ function replaceContent(newText){
 
     oldContent.innerHTML = newContent.innerHTML;
     document.title = newHtml.querySelector('title').innerText;
-
-    console.log(oldContent);
 }
+
+window.addEventListener('popstate', () => {
+    console.log(window.location)
+    // fetchPage()
+})
 
 // 12 - quando clicar em um dos link ativa a função handleClick    
 links.forEach(link => {
