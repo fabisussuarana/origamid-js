@@ -41,7 +41,11 @@ class Button2 {
     const buttonElement = document.createElement('button');
     buttonElement.innerText = this.text;
     buttonElement.style.background = this.background;
-    return buttonElement;
+    // seleciono o body
+    const targetElement = document.querySelector('body');
+    // mando o elemento btn criado e estilizado para dentro do body e retorno
+    targetElement.appendChild(buttonElement);
+    return targetElement;
   }
 }
 
@@ -51,13 +55,17 @@ console.log(greenButton.element());
 // THIS
 // Assim como em uma função construtora, this faz referência ao objeto criado com new. 
 // Você pode acessar as propriedades e métodos da classe utilizando o this.
-class Button {
-  constructor(text) {
+class Button3 {
+  constructor(text, background, color) {
     this.text = text;
+    this.background = background;
+    this.color = color;
   }
   element() {
     const buttonElement = document.createElement('button')
     buttonElement.innerText = this.text;
+    buttonElement.style.background = this.background;
+    buttonElement.style.color = this.color;
     return buttonElement;
   }
   appendElementTo(target) {
@@ -66,5 +74,23 @@ class Button {
   }
 }
 
-const button2 = new Button('Clique');
+const button2 = new Button3('Clique', 'blue', 'white');
+console.log(button2.element())
 button2.appendElementTo('body');
+
+// criando objeto para passar como parâmetro
+class btn {
+  constructor(options){
+    this.options = options;
+  }
+}
+
+optionsBtn = {
+  background: 'blue',
+  color: 'white',
+  text: 'enviar'
+}
+
+const blueBtn = new btn(optionsBtn);
+console.log(blueBtn.options);
+
