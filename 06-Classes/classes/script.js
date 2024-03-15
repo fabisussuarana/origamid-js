@@ -94,3 +94,23 @@ optionsBtn = {
 const blueBtn = new btn(optionsBtn);
 console.log(blueBtn.options);
 
+// Você pode utilizar um método static para retornar 
+// a própria classe com propriedades já pré definidas.
+class BtnStatic {
+  constructor(text, background) {
+    this.text = text;
+    this.background = background;
+  }
+  element() {
+    const elementButton = document.createElement('button');
+    elementButton.innerText = this.text;
+    elementButton.style.background = this.background;
+    return elementButton
+  }
+  static createBlue(text) {
+    return new BtnStatic(text, 'red');
+  }
+}
+
+const redButton = BtnStatic.createBlue('Comprar');
+console.log(redButton.element())
