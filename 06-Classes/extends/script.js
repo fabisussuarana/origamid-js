@@ -42,6 +42,7 @@ yamaha.acelerar();
 // SUPER
 // É possível utilizar a palavra chave super para falarmos 
 // com a classe que pai e acessarmos os seus métodos e propriedades.
+// se tentar acessar as propriedades e métodos da classe extendida sem o super, dá erro
 class Veiculo3 {
     constructor(rodas) {
         this.rodas = rodas;
